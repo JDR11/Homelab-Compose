@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  homepage:
+    image: ghcr.io/gethomepage/homepage:latest
+    container_name: homepage
+    ports:
+      - 80:3000
+    volumes:
+      - /home/joshuar/Documents/Homepage/config:/app/config # Make sure your local config directory exists
+      - /home/joshuar/Documents/Homepage/images:/app/public/images # Background Images folder
+      - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
