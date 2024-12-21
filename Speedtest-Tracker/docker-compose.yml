@@ -1,0 +1,16 @@
+services:
+    speedtest-tracker:
+        image: lscr.io/linuxserver/speedtest-tracker:latest
+        restart: unless-stopped
+        container_name: speedtest-tracker
+        ports:
+            - 7080:80
+            - 7443:443
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - APP_KEY=base64:OAg8Ip3KcKldwIe8cx+yIgX9hLwFTrYAYp2F8E2XniM=
+            - DB_CONNECTION=sqlite
+            - SPEEDTEST-SCHEDULE=0 */6 * * *
+        volumes:
+            - /home/jdr/.config/Speedtest-Tracker:/config
