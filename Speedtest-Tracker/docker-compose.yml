@@ -11,7 +11,7 @@ services:
             - PGID=1000
             - APP_KEY=base64:OAg8Ip3KcKldwIe8cx+yIgX9hLwFTrYAYp2F8E2XniM=
             - DB_CONNECTION=sqlite
-            - SPEEDTEST-SCHEDULE=0 */6 * * *
+            - SPEEDTEST_SCHEDULE=0 */6 * * *
             - PUBLIC_DASHBOARD=true
         volumes:
             - /home/jdr/.config/Speedtest-Tracker:/config
