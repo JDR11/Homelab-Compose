@@ -1,4 +1,3 @@
-version: "3.3"
 services:
   homepage:
     image: ghcr.io/gethomepage/homepage:latest
@@ -11,3 +10,5 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
       #network_mode: "host"
     restart: unless-stopped
+    environment:
+      HOMEPAGE_ALLOWED_HOSTS: 100.93.87.100
