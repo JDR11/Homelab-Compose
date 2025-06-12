@@ -41,3 +41,7 @@ services:
 volumes:
   mealie-data:
   mealie-pgdata:
+
+networks:
+  mealie-net:
+    driver: bridge
