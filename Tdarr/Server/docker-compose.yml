@@ -1,3 +1,4 @@
+name: Tdarr-Server
 services:
   tdarr:
     container_name: tdarr
