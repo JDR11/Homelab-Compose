@@ -10,13 +10,11 @@ services:
       - 8266:8266 # server port
     environment:
       - TZ=Europe/London
-      - PUID=1000
-      - PGID=1002
       - UMASK_SET=002
-      - serverIP=100.93.87.100
+      - serverIP=0.0.0.0
       - serverPort=8266
       - webUIPort=8265
-      - internalNode=true
+      - internalNode=false
       - inContainer=true
       - ffmpegVersion=7
       - nodeName=InternalNode
