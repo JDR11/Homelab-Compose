@@ -1,0 +1,19 @@
+version: '3'
+services:
+  podfetch:
+    image: samuel19982/podfetch:latest
+    ports:
+      - "8060:8000"
+    volumes:
+      - podfetch-podcasts:/app/podcasts
+      - podfetch-db:/app/db
+    environment:
+      - POLLING_INTERVAL=60
+      - SERVER_URL=http://localhost:8060
+      - DATABASE_URL=sqlite:///app/db/podcast.db
+    env_file: "podfetch.env"
+
+volumes:
+    podfetch-podcasts:
+    podfetch-db:
+

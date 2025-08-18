@@ -11,8 +11,9 @@ services:
       - PGID=1002
       - UMASK_SET=002
       - nodeName=PCNode
-      - serverIP=100.93.87.100
+      - serverIP=192.168.8.179
       - serverPort=8266
+      - serverUrl=192.168.8.179:8266
       - inContainer=true
       - ffmpegVersion=7
       - nodeType=mapped
@@ -23,7 +24,8 @@ services:
       - pollInterval=2000
       - startPaused=false
       - transcodecpuWorkers=2
-      - healthcheckcpuWorkers=1
+      - healthcheckcpuWorkers=2
+#      - transcodegpuWorkers=4    needs gpu passthrough, not doing on main PC
 
     volumes:
       - /docker/tdarr/configs:/app/configs
