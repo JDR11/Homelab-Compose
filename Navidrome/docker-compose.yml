@@ -10,5 +10,5 @@ services:
       # ND_LOGLEVEL: debug
       ND_CONFIGFILE: "/data/navidrome.toml"
     volumes:
-      - "/opt/navidrome/data:/data"
+      - "/opt/Navidrome/data:/data"
       - "/media/Music:/music:ro"
